@@ -31,7 +31,7 @@ int sort(int *arr,int length)
 	{
 		for(j=i;j<length;j++)
 		{
-			if (arr[i]>arr[j])				// swapping the elements without using another temporary variable
+			if (arr[i]>arr[j])
 			{
 				temp=arr[i];
 				arr[i]=arr[j];
