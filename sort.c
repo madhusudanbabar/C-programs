@@ -1,8 +1,7 @@
-#include<stdio.h>
-int sort(int *,int );							//function to sort the array
+#include<stdio.h>							
 int main()
 {
-	int length,i;
+	int length,i,j,temp;
 	printf("Enter the size of array : ");				//size of array
 	scanf("%d",&length);
 	int arr[length];
@@ -15,18 +14,8 @@ int main()
 	for (i = 0; i < length; i++)
 	{
 		printf("%d\t",arr[i] );
-	}
-	sort(&arr[0],length);						// sorting the array
-	printf("\nArray after sorting :\t");
-	for (i = 0; i < length; i++)
-	{
-		printf("%d\t",arr[i] );
-	}
-}
-
-int sort(int *arr,int length)
-{
-	int i,j,temp;
+	}						
+	//sorting process
 	for(i=0;i<length;i++)
 	{
 		for(j=i;j<length;j++)
@@ -38,5 +27,10 @@ int sort(int *arr,int length)
 				arr[j]=temp;
 			}
 		}
+	}
+	printf("\nArray after sorting :\t");
+	for (i = 0; i < length; i++)
+	{
+		printf("%d\t",arr[i] );
 	}
 }
